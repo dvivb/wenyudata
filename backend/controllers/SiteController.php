@@ -1,6 +1,13 @@
 <?php
 namespace backend\controllers;
 
+use backend\services\VideoBlService;
+use backend\services\VideoDyService;
+use backend\services\VideoHsService;
+use backend\services\VideoKsService;
+use backend\services\VideoMepService;
+use backend\services\VideoMipService;
+use backend\services\VideoXgService;
 use Yii;
 use backend\models\AdminUser;
 use backend\models\BackendUser;
@@ -33,6 +40,38 @@ class SiteController extends BaseController
             return $this->render('login');
         }
         else{
+            $VideoDy = new VideoDyService();
+            $video_dy_count = $VideoDy->getCount();
+
+            $VideoKs = new VideoKsService();
+            $video_ks_count = $VideoKs->getCount();
+
+            $VideoBl = new VideoBlService();
+            $video_bl_count = $VideoBl->getCount();
+
+            $VideoMep = new VideoMepService();
+            $video_mep_count = $VideoMep->getCount();
+
+
+            $VideoMip = new VideoMipService();
+            $video_mip_count = $VideoMip->getCount();
+
+            $VideoXg = new VideoXgService();
+            $video_xg_count = $VideoXg->getCount();
+
+            $VideoHs = new VideoHsService();
+            $video_hs_count = $VideoHs->getCount();
+
+            $statistics = [
+                'video_dy_count'    => $video_dy_count,
+                'video_ks_count'    => $video_ks_count,
+                'video_bl_count'    => $video_bl_count,
+                'video_mep_count'   => $video_mep_count,
+                'video_mip_count'   => $video_mip_count,
+                'video_xg_count'    => $video_xg_count,
+                'video_hs_count'    => $video_hs_count,
+            ];
+
 //             $this->layout = "lte_main";
             $menus = Yii::$app->user->identity->getSystemMenus();
             $sysInfo = [
@@ -45,6 +84,7 @@ class SiteController extends BaseController
             ];
             return $this->render('index', [
                 'system_menus' => $menus,
+                'statistics'    =>$statistics,
                 'sysInfo'=>$sysInfo
             ]);
         }
