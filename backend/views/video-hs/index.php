@@ -41,8 +41,8 @@ $modelLabel = new \backend\models\VideoHs();
                 <?php ActiveForm::begin(['id' => 'video-hs-search-form', 'method'=>'get', 'options' => ['class' => 'form-inline'], 'action'=>Url::toRoute('video-hs/index')]); ?>     
                 
                   <div class="form-group" style="margin: 5px;">
-                      <label><?=$modelLabel->getAttributeLabel('id')?>:</label>
-                      <input type="text" class="form-control" id="query[id]" name="query[id]"  value="<?=isset($query["id"]) ? $query["id"] : "" ?>">
+<!--                      <label>--><?//=$modelLabel->getAttributeLabel('id')?><!--:</label>-->
+<!--                      <input type="text" class="form-control" id="query[id]" name="query[id]"  value="--><?//=isset($query["id"]) ? $query["id"] : "" ?><!--">-->
                       <label><?=$modelLabel->getAttributeLabel('ranking')?>:</label>
                       <input type="text" class="form-control" id="query[ranking]" name="query[ranking]"  value="<?=isset($query["ranking"]) ? $query["ranking"] : "" ?>">
                       <label><?=$modelLabel->getAttributeLabel('account_name')?>:</label>
@@ -68,27 +68,27 @@ $modelLabel = new \backend\models\VideoHs();
             <?php 
               $orderby = isset($_GET['orderby']) ? $_GET['orderby'] : '';
 		      echo '<th><input id="data_table_check" type="checkbox"></th>';
-              echo '<th onclick="orderby(\'id\', \'desc\')" '.CommonFun::sortClass($orderby, 'id').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('id').'</th>';
+//              echo '<th onclick="orderby(\'id\', \'desc\')" '.CommonFun::sortClass($orderby, 'id').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('id').'</th>';
               echo '<th onclick="orderby(\'ranking\', \'desc\')" '.CommonFun::sortClass($orderby, 'ranking').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('ranking').'</th>';
               echo '<th onclick="orderby(\'account_name\', \'desc\')" '.CommonFun::sortClass($orderby, 'account_name').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('account_name').'</th>';
               echo '<th onclick="orderby(\'account_id\', \'desc\')" '.CommonFun::sortClass($orderby, 'account_id').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('account_id').'</th>';
               echo '<th onclick="orderby(\'platform\', \'desc\')" '.CommonFun::sortClass($orderby, 'platform').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('platform').'</th>';
               echo '<th onclick="orderby(\'gender\', \'desc\')" '.CommonFun::sortClass($orderby, 'gender').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('gender').'</th>';
-              echo '<th onclick="orderby(\'integrated_marketing_gain\', \'desc\')" '.CommonFun::sortClass($orderby, 'integrated_marketing_gain').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('integrated_marketing_gain').'</th>';
-              echo '<th onclick="orderby(\'spread_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'spread_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('spread_index').'</th>';
-              echo '<th onclick="orderby(\'interactive_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'interactive_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('interactive_index').'</th>';
-              echo '<th onclick="orderby(\'activity_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'activity_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('activity_index').'</th>';
-              echo '<th onclick="orderby(\'growth_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'growth_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('growth_index').'</th>';
-              echo '<th onclick="orderby(\'health_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'health_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('health_index').'</th>';
-              echo '<th onclick="orderby(\'business_fitness_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'business_fitness_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('business_fitness_index').'</th>';
+//              echo '<th onclick="orderby(\'integrated_marketing_gain\', \'desc\')" '.CommonFun::sortClass($orderby, 'integrated_marketing_gain').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('integrated_marketing_gain').'</th>';
+//              echo '<th onclick="orderby(\'spread_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'spread_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('spread_index').'</th>';
+//              echo '<th onclick="orderby(\'interactive_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'interactive_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('interactive_index').'</th>';
+//              echo '<th onclick="orderby(\'activity_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'activity_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('activity_index').'</th>';
+//              echo '<th onclick="orderby(\'growth_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'growth_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('growth_index').'</th>';
+//              echo '<th onclick="orderby(\'health_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'health_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('health_index').'</th>';
+//              echo '<th onclick="orderby(\'business_fitness_index\', \'desc\')" '.CommonFun::sortClass($orderby, 'business_fitness_index').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('business_fitness_index').'</th>';
               echo '<th onclick="orderby(\'wechat\', \'desc\')" '.CommonFun::sortClass($orderby, 'wechat').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('wechat').'</th>';
               echo '<th onclick="orderby(\'weibo\', \'desc\')" '.CommonFun::sortClass($orderby, 'weibo').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('weibo').'</th>';
               echo '<th onclick="orderby(\'mobile\', \'desc\')" '.CommonFun::sortClass($orderby, 'mobile').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('mobile').'</th>';
               echo '<th onclick="orderby(\'telephone\', \'desc\')" '.CommonFun::sortClass($orderby, 'telephone').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('telephone').'</th>';
               echo '<th onclick="orderby(\'contact_status\', \'desc\')" '.CommonFun::sortClass($orderby, 'contact_status').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('contact_status').'</th>';
               echo '<th onclick="orderby(\'remark\', \'desc\')" '.CommonFun::sortClass($orderby, 'remark').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('remark').'</th>';
-              echo '<th onclick="orderby(\'create_date\', \'desc\')" '.CommonFun::sortClass($orderby, 'create_date').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('create_date').'</th>';
-              echo '<th onclick="orderby(\'update_time\', \'desc\')" '.CommonFun::sortClass($orderby, 'update_time').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('update_time').'</th>';
+//              echo '<th onclick="orderby(\'create_date\', \'desc\')" '.CommonFun::sortClass($orderby, 'create_date').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('create_date').'</th>';
+//              echo '<th onclick="orderby(\'update_time\', \'desc\')" '.CommonFun::sortClass($orderby, 'update_time').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('update_time').'</th>';
          
 			?>
 	
@@ -101,27 +101,27 @@ $modelLabel = new \backend\models\VideoHs();
             foreach ($models as $model) {
                 echo '<tr id="rowid_' . $model->id . '">';
                 echo '  <td><label><input type="checkbox" value="' . $model->id . '"></label></td>';
-                echo '  <td>' . $model->id . '</td>';
+//                echo '  <td>' . $model->id . '</td>';
                 echo '  <td>' . $model->ranking . '</td>';
                 echo '  <td>' . $model->account_name . '</td>';
                 echo '  <td>' . $model->account_id . '</td>';
                 echo '  <td>' . $model->platform . '</td>';
                 echo '  <td>' . $model->gender . '</td>';
-                echo '  <td>' . $model->integrated_marketing_gain . '</td>';
-                echo '  <td>' . $model->spread_index . '</td>';
-                echo '  <td>' . $model->interactive_index . '</td>';
-                echo '  <td>' . $model->activity_index . '</td>';
-                echo '  <td>' . $model->growth_index . '</td>';
-                echo '  <td>' . $model->health_index . '</td>';
-                echo '  <td>' . $model->business_fitness_index . '</td>';
+//                echo '  <td>' . $model->integrated_marketing_gain . '</td>';
+//                echo '  <td>' . $model->spread_index . '</td>';
+//                echo '  <td>' . $model->interactive_index . '</td>';
+//                echo '  <td>' . $model->activity_index . '</td>';
+//                echo '  <td>' . $model->growth_index . '</td>';
+//                echo '  <td>' . $model->health_index . '</td>';
+//                echo '  <td>' . $model->business_fitness_index . '</td>';
                 echo '  <td>' . $model->wechat . '</td>';
                 echo '  <td>' . $model->weibo . '</td>';
                 echo '  <td>' . $model->mobile . '</td>';
                 echo '  <td>' . $model->telephone . '</td>';
                 echo '  <td>' . $model->contact_status . '</td>';
                 echo '  <td>' . $model->remark . '</td>';
-                echo '  <td>' . $model->create_date . '</td>';
-                echo '  <td>' . $model->update_time . '</td>';
+//                echo '  <td>' . $model->create_date . '</td>';
+//                echo '  <td>' . $model->update_time . '</td>';
                 echo '  <td class="center">';
                 echo '      <a id="view_btn" onclick="viewAction(' . $model->id . ')" class="btn btn-primary btn-sm" href="#"> <i class="glyphicon glyphicon-zoom-in icon-white"></i>查看</a>';
                 echo '      <a id="edit_btn" onclick="editAction(' . $model->id . ')" class="btn btn-primary btn-sm" href="#"> <i class="glyphicon glyphicon-edit icon-white"></i>修改</a>';
@@ -188,13 +188,13 @@ $modelLabel = new \backend\models\VideoHs();
                  
           <input type="hidden" class="form-control" id="id" name="id" />
 
-          <div id="ranking_div" class="form-group">
-              <label for="ranking" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("ranking")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="ranking" name="VideoHs[ranking]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
+<!--          <div id="ranking_div" class="form-group">-->
+<!--              <label for="ranking" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("ranking")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="ranking" name="VideoHs[ranking]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
 
           <div id="account_name_div" class="form-group">
               <label for="account_name" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("account_name")?></label>
@@ -212,77 +212,77 @@ $modelLabel = new \backend\models\VideoHs();
               <div class="clearfix"></div>
           </div>
 
-          <div id="platform_div" class="form-group">
-              <label for="platform" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("platform")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="platform" name="VideoHs[platform]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="gender_div" class="form-group">
-              <label for="gender" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("gender")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="gender" name="VideoHs[gender]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="integrated_marketing_gain_div" class="form-group">
-              <label for="integrated_marketing_gain" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("integrated_marketing_gain")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="integrated_marketing_gain" name="VideoHs[integrated_marketing_gain]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="spread_index_div" class="form-group">
-              <label for="spread_index" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("spread_index")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="spread_index" name="VideoHs[spread_index]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="interactive_index_div" class="form-group">
-              <label for="interactive_index" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("interactive_index")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="interactive_index" name="VideoHs[interactive_index]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="activity_index_div" class="form-group">
-              <label for="activity_index" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("activity_index")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="activity_index" name="VideoHs[activity_index]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="growth_index_div" class="form-group">
-              <label for="growth_index" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("growth_index")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="growth_index" name="VideoHs[growth_index]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="health_index_div" class="form-group">
-              <label for="health_index" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("health_index")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="health_index" name="VideoHs[health_index]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="business_fitness_index_div" class="form-group">
-              <label for="business_fitness_index" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("business_fitness_index")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="business_fitness_index" name="VideoHs[business_fitness_index]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
+<!--          <div id="platform_div" class="form-group">-->
+<!--              <label for="platform" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("platform")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="platform" name="VideoHs[platform]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="gender_div" class="form-group">-->
+<!--              <label for="gender" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("gender")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="gender" name="VideoHs[gender]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="integrated_marketing_gain_div" class="form-group">-->
+<!--              <label for="integrated_marketing_gain" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("integrated_marketing_gain")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="integrated_marketing_gain" name="VideoHs[integrated_marketing_gain]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="spread_index_div" class="form-group">-->
+<!--              <label for="spread_index" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("spread_index")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="spread_index" name="VideoHs[spread_index]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="interactive_index_div" class="form-group">-->
+<!--              <label for="interactive_index" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("interactive_index")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="interactive_index" name="VideoHs[interactive_index]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="activity_index_div" class="form-group">-->
+<!--              <label for="activity_index" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("activity_index")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="activity_index" name="VideoHs[activity_index]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="growth_index_div" class="form-group">-->
+<!--              <label for="growth_index" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("growth_index")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="growth_index" name="VideoHs[growth_index]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="health_index_div" class="form-group">-->
+<!--              <label for="health_index" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("health_index")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="health_index" name="VideoHs[health_index]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="business_fitness_index_div" class="form-group">-->
+<!--              <label for="business_fitness_index" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("business_fitness_index")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="business_fitness_index" name="VideoHs[business_fitness_index]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
 
           <div id="wechat_div" class="form-group">
               <label for="wechat" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("wechat")?></label>
@@ -332,21 +332,21 @@ $modelLabel = new \backend\models\VideoHs();
               <div class="clearfix"></div>
           </div>
 
-          <div id="create_date_div" class="form-group">
-              <label for="create_date" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("create_date")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="create_date" name="VideoHs[create_date]" placeholder="必填" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
-
-          <div id="update_time_div" class="form-group">
-              <label for="update_time" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("update_time")?></label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="update_time" name="VideoHs[update_time]" placeholder="" />
-              </div>
-              <div class="clearfix"></div>
-          </div>
+<!--          <div id="create_date_div" class="form-group">-->
+<!--              <label for="create_date" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("create_date")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="create_date" name="VideoHs[create_date]" placeholder="必填" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
+<!---->
+<!--          <div id="update_time_div" class="form-group">-->
+<!--              <label for="update_time" class="col-sm-2 control-label">--><?php //echo $modelLabel->getAttributeLabel("update_time")?><!--</label>-->
+<!--              <div class="col-sm-10">-->
+<!--                  <input type="text" class="form-control" id="update_time" name="VideoHs[update_time]" placeholder="" />-->
+<!--              </div>-->
+<!--              <div class="clearfix"></div>-->
+<!--          </div>-->
                     
 
 			<?php ActiveForm::end(); ?>          
