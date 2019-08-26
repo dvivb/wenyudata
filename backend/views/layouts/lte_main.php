@@ -151,7 +151,7 @@ if($otherMenu == false){
 <?= $this->blocks['header'] ?>
 <?php endif;?>
 </head>
-<body class="hold-transition skin-blue-light sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
 <div class="modal fade" id="confirm_dialog" tabindex="-1" role="dialog"
 	aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -178,7 +178,7 @@ if($otherMenu == false){
     <!-- Logo -->
     <a href="<?=Url::toRoute('site/index')?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>R</b>D</span>
+      <span class="logo-mini"><b>W</b>Y</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><?=Yii::$app->params['appName']?></span>
     </a>
