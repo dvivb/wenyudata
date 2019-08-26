@@ -44,9 +44,9 @@ class VideoDy extends \backend\models\BaseModel
     public function rules()
     {
         return [
-            [['integrated_marketing_gain', 'spread_index', 'interactive_index', 'activity_index', 'growth_index', 'health_index', 'business_fitness_index'], 'number'],
+            [['ranking', 'integrated_marketing_gain', 'spread_index', 'interactive_index', 'activity_index', 'growth_index', 'health_index', 'business_fitness_index'], 'number'],
             [['create_date', 'update_time'], 'safe'],
-            [['ranking'], 'string', 'max' => 5],
+//            [['ranking'], 'string', 'max' => 5],
             [['account_name', 'account_id', 'platform', 'gender', 'wechat', 'weibo'], 'string', 'max' => 30],
             [['mobile'], 'string', 'max' => 11],
             [['telephone', 'contact_status'], 'string', 'max' => 12],
